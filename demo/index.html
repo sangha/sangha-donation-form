@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>sangha donation form demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
+    <link rel="import" href="../sangha-donation-form.html">
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>sangha donation form - one project with buttons</h3>
+      <demo-snippet>
+        <template>
+          <sangha-donation-form api-url="https://api.sandbox.sangha.techcultivation.org" projects='[1]' buttons="[5,10,25,100]"></sangha-donation-form>
+        </template>
+      </demo-snippet>
+
+      <h3>sangha donation form - multiple projects with input fields</h3>
+      <demo-snippet>
+        <template>
+          <sangha-donation-form api-url="https://api.sandbox.sangha.techcultivation.org" projects='[1,2]'></sangha-donation-form>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>

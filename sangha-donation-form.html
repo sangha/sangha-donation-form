@@ -1,0 +1,66 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<link rel="import" href="../iron-ajax/iron-ajax.html">
+<link rel="import" href="../jsonapi-helpers/jsonapi-settings.html">
+<link rel="import" href="../jsonapi-helpers/jsonapi-resource.html">
+<link rel="import" href="../sangha-material-checkout/sangha-material-checkout.html">
+<link rel="import" href="../sangha-material-styles/sangha-material-styles.html">
+
+<dom-module id="sangha-donation-form">
+  <template>
+    <style include="sangha-material-styles">
+      :host {
+        --primary-color:  var(--paper-indigo-600);
+        --secondary-color: var(--paper-indigo-50);
+
+        display: block;
+        max-width: 40em;
+        padding: 1em;
+      }
+    </style>
+
+    <jsonapi-settings api-root="[[ apiUrl ]]"></jsonapi-settings>
+    <iron-ajax url="[[ apiUrl ]]/../settings/settings.json" last-response="{{ settings }}" handle-as="json" auto="[[ apiUrl ]]"></iron-ajax>
+
+    <sangha-material-checkout gateways="[[ settings.paymentGateways ]]" donation-buttons="[[ buttons ]]"></sangha-material-checkout>
+
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     * @extends {Polymer.Element}
+     */
+    class SanghaDonationForm extends Polymer.Element {
+      static get is() { return 'sangha-donation-form'; }
+
+      static get properties() {
+        return {
+          // (required) the backend url
+          apiUrl: {
+            type: Object,
+          },
+          // (required) the project ids in the cart
+          projectIds: {
+            type: Array,
+            value: () => {
+              return [];
+            }
+          },
+          // (optional) button amounts
+          buttons: {
+            type: Array,
+          },
+          // (optional) default donation amount
+          defaultAmount: {
+            type: Number,
+            value: 5,
+          },
+        };
+      }
+    }
+
+    window.customElements.define(SanghaDonationForm.is, SanghaDonationForm);
+  </script>
+</dom-module>

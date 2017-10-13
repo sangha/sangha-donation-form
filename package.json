@@ -1,0 +1,24 @@
+{
+  "name": "sangha-donation-form",
+  "description": "Embeddable donation form for Sangha",
+  "author": "morbidick",
+  "license": "MIT",
+  "main": "sangha-donation-form.html",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "polymer-cli": "^1.0.0"
+  },
+  "scripts": {
+    "start": "npm run serve",
+    "init": "polymer init",
+    "serve": "polymer serve",
+    "build": "polymer build",
+    "analyze": "polymer analyze > analysis.json",
+    "lint": "polymer lint",
+    "test": "polymer test",
+    "postinstall": "bower install",
+    "wcinstall": "bower install --save",
+    "wcupdate": "bower update"
+  },
+  "devDependencies": {}
+}

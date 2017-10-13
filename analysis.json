@@ -1,0 +1,180 @@
+{
+  "schema_version": "1.0.0",
+  "elements": [
+    {
+      "description": "",
+      "summary": "",
+      "path": "sangha-donation-form.html",
+      "properties": [
+        {
+          "name": "apiUrl",
+          "type": "Object",
+          "description": "(required) the backend url",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 40,
+              "column": 10
+            },
+            "end": {
+              "line": 42,
+              "column": 11
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          }
+        },
+        {
+          "name": "projectIds",
+          "type": "Array",
+          "description": "(required) the project ids in the cart",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 44,
+              "column": 10
+            },
+            "end": {
+              "line": 49,
+              "column": 11
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "[]"
+        },
+        {
+          "name": "buttons",
+          "type": "Array",
+          "description": "(optional) button amounts",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 51,
+              "column": 10
+            },
+            "end": {
+              "line": 53,
+              "column": 11
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          }
+        },
+        {
+          "name": "defaultAmount",
+          "type": "number",
+          "description": "(optional) default donation amount",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 55,
+              "column": 10
+            },
+            "end": {
+              "line": 58,
+              "column": 11
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "5"
+        }
+      ],
+      "methods": [],
+      "staticMethods": [],
+      "demos": [],
+      "metadata": {},
+      "sourceRange": {
+        "start": {
+          "line": 34,
+          "column": 4
+        },
+        "end": {
+          "line": 61,
+          "column": 5
+        }
+      },
+      "privacy": "public",
+      "superclass": "HTMLElement",
+      "name": "SanghaDonationForm",
+      "attributes": [
+        {
+          "name": "api-url",
+          "description": "(required) the backend url",
+          "sourceRange": {
+            "start": {
+              "line": 40,
+              "column": 10
+            },
+            "end": {
+              "line": 42,
+              "column": 11
+            }
+          },
+          "metadata": {},
+          "type": "Object"
+        },
+        {
+          "name": "project-ids",
+          "description": "(required) the project ids in the cart",
+          "sourceRange": {
+            "start": {
+              "line": 44,
+              "column": 10
+            },
+            "end": {
+              "line": 49,
+              "column": 11
+            }
+          },
+          "metadata": {},
+          "type": "Array"
+        },
+        {
+          "name": "buttons",
+          "description": "(optional) button amounts",
+          "sourceRange": {
+            "start": {
+              "line": 51,
+              "column": 10
+            },
+            "end": {
+              "line": 53,
+              "column": 11
+            }
+          },
+          "metadata": {},
+          "type": "Array"
+        },
+        {
+          "name": "default-amount",
+          "description": "(optional) default donation amount",
+          "sourceRange": {
+            "start": {
+              "line": 55,
+              "column": 10
+            },
+            "end": {
+              "line": 58,
+              "column": 11
+            }
+          },
+          "metadata": {},
+          "type": "number"
+        }
+      ],
+      "events": [],
+      "styling": {
+        "cssVariables": [],
+        "selectors": []
+      },
+      "slots": [],
+      "tagname": "sangha-donation-form"
+    }
+  ]
+}
