@@ -37,3 +37,9 @@ $ npm start
 # Run tests
 $ npm test
 ```
+
+## Deploy
+
+```bash
+rsync -avz build/es6-bundled/ cct-services:/var/www/embed/
+```

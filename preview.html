@@ -9,9 +9,18 @@
     <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
     <link rel="import" href="sangha-donation-form.html">
 
+    <style>
+      sangha-donation-form {
+        margin: auto;
+      }
+    </style>
   </head>
   <body>
-    <sangha-donation-form>
-    </sangha-donation-form>
+    <sangha-donation-form
+      api-url="https://sandbox.api.sangha.techcultivation.org/v1"
+      project-ids='["abcd"]'
+      buttons="[5,10,25,100]"
+      default-amount="10"
+    ></sangha-donation-form>
   </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "entrypoint": "entrypoint.html",
+  "entrypoint": "preview.html",
   "shell": "sangha-donation-form.html",
   "extraDependencies": [
     "README.md",
