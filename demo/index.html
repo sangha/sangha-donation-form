@@ -23,14 +23,22 @@
       <h3>sangha donation form - one project with buttons</h3>
       <demo-snippet>
         <template>
-          <sangha-donation-form api-url="https://api.sandbox.sangha.techcultivation.org" projects='[1]' buttons="[5,10,25,100]"></sangha-donation-form>
+          <sangha-donation-form
+            api-url="https://sandbox.api.sangha.techcultivation.org/v1"
+            project-ids='["abcd"]'
+            buttons="[5,10,25,100]"
+            default-amount="10"
+          ></sangha-donation-form>
         </template>
       </demo-snippet>
 
       <h3>sangha donation form - multiple projects with input fields</h3>
       <demo-snippet>
         <template>
-          <sangha-donation-form api-url="https://api.sandbox.sangha.techcultivation.org" projects='[1,2]'></sangha-donation-form>
+          <sangha-donation-form
+            api-url="https://sandbox.api.sangha.techcultivation.org/v1"
+            project-ids='["bcde","cdef"]'
+          ></sangha-donation-form>
         </template>
       </demo-snippet>
     </div>

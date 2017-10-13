@@ -21,8 +21,9 @@
 
     <jsonapi-settings api-root="[[ apiUrl ]]"></jsonapi-settings>
     <iron-ajax url="[[ apiUrl ]]/../settings/settings.json" last-response="{{ settings }}" handle-as="json" auto="[[ apiUrl ]]"></iron-ajax>
+    <jsonapi-resource id="projects" resource="projects" filters="[[ _projectFilter ]]" auto-get="[[ _projectFilter ]]" response="{{ _projects }}"></jsonapi-resource>
 
-    <sangha-material-checkout gateways="[[ settings.paymentGateways ]]" donation-buttons="[[ buttons ]]"></sangha-material-checkout>
+    <sangha-material-checkout standalone cart-items="{{ _cart }}" gateways="[[ settings.paymentGateways ]]" donation-buttons="[[ buttons ]]"></sangha-material-checkout>
 
   </template>
 
@@ -39,7 +40,7 @@
         return {
           // (required) the backend url
           apiUrl: {
-            type: Object,
+            type: String,
           },
           // (required) the project ids in the cart
           projectIds: {
@@ -57,7 +58,33 @@
             type: Number,
             value: 5,
           },
+          _projects: {
+            type: Object,
+          },
+          _projectFilter: {
+            type: Object,
+            computed: "__projectFilter(projectIds)",
+          },
+          _cart: {
+            type: Object,
+            computed: "__cart(_projects, defaultAmount)",
+          },
         };
+      }
+
+      __projectFilter(ids) {
+        return {
+          ids,
+        };
+      }
+
+      __cart(projects, amount) {
+        if (!projects) { return []; };
+        return projects.map((project) => {
+          return {
+            project,
+            amount,
+        }});
       }
     }
 
