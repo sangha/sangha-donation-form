@@ -5,7 +5,8 @@
     "README.md",
     "bower_components/webcomponentsjs/*.js",
     "bower_components/font-roboto/fonts/**/*.ttf",
-    "bower_components/country-list/data/**/*.json"
+    "bower_components/country-list/data/**/*.json",
+    "bower_components/paypal-express-checkout/paypal.html"
   ],
   "lint": {
     "rules": ["polymer-2"]
