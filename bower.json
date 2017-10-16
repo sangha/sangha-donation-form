@@ -8,6 +8,7 @@
   "dependencies": {
     "jsonapi-helpers": "morbidick/jsonapi-helpers#^2.0.0",
     "polymer": "Polymer/polymer#^2.0.0",
+    "iron-iconset-svg": "morbidick/iron-iconset-svg#^2.2.0",
     "sangha-material-checkout": "https://gitlab.techcultivation.org/sangha-webcomponents/sangha-material-checkout.git#^0.2.0",
     "sangha-material-styles": "https://gitlab.techcultivation.org/sangha-webcomponents/sangha-material-styles.git#^1.0.0"
   },
